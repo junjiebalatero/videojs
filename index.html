@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>AngularJS Video Player</title>
+</head>
+<body ng-controller="VideoController">
+  <video controls>
+    <source ng-src="{{ videoSource }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <button ng-click="changeVideo()">Change Video</button>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
