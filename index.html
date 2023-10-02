@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
 <head>
-  <title>AngularJS Video Player</title>
+   <link href="https://vjs.zencdn.net/7.19.2/video-js.css"rel="stylesheet" />
 </head>
-<body ng-controller="VideoController">
-  <video controls>
-    <source ng-src="{{ videoSource }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  
-  <button ng-click="changeVideo()">Change Video</button>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script src="app.js"></script>
+<body>
+   <video id="my-video-player" controls class="video-js" datasetup='{}'>
+      <source src="https://chocolate-cooperative-herring-689.mypinata.cloud/ipfs/Qmbxbfrj1SJ9C1oaPD4CsTRHkoVA6KdC1pJTSDf6j7SR67" type="video/mp4" />
+   </video>
+   <script src="https://vjs.zencdn.net/7.19.2/video.min.js">
+      const player = videojs(document.querySelector('.video-js'));
+   </script>
 </body>
 </html>
